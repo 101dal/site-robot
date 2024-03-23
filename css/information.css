@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Turret+Road:wght@200;300;400;500;700;800&display=swap");
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  background: rgb(204, 111, 45);
+  background: linear-gradient(180deg,
+      rgba(204, 111, 45, 1) 0%,
+      rgba(204, 111, 45, 1) 25%,
+      rgba(161, 87, 35, 1) 50%,
+      rgba(121, 65, 26, 1) 75%,
+      rgb(102, 55, 21) 100%);
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+section:not(.hero) {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+section:not(.hero) .container {
+  max-width: 70vw;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.container .link {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.container .link img {
+  position: absolute;
+
+  opacity: 0;
+
+
+  left: 0;
+  top: 120%;
+
+  width: 60px;
+
+  overflow: hidden;
+}
+
+.container .link a {
+  font-size: 1.7rem;
+  font-family: "Turret Road", sans-serif;
+  text-decoration: none;
+  font-weight: 900;
+  color: rgb(85, 20, 20);
+  transition: color 0.3s ease-in-out;
+  padding: 10px;
+}
+
+.container .link a:hover {
+  color: #f07218;
+}
+
+.container .link a:hover+img {
+  opacity: 1;
+}
+
+
+h2,
+h3 {
+  font-family: "Turret Road", sans-serif;
+}
+
+li {
+  font-family: "Turret Road", sans-serif;
+
+  font-weight: 600;
+
+  font-size: 1.5rem;
+}
+
+section:not(.hero) h2,
+section:not(.hero) h3 {
+  color: #333;
+  text-align: center;
+}
+
+section:not(.hero) h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+section:not(.hero) h3 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+section:not(.hero) ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+section:not(.hero) li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+  section:not(.hero) .container {
+    max-width: 90vw;
+  }
+}

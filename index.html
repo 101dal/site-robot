@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adeept Pi Car</title>
+    <!-- Import the css -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, p, li, ul, div {
+            cursor:default;
+        }
+    </style>
+    <link href="./css/navbar.css" rel="stylesheet">
+    <link href="./css/hero.css" rel="stylesheet">
+    <link href="./css/information.css" rel="stylesheet">
+
+    <script src="./scripts/hover_effect.js" defer> </script>
+    <script src="./scripts/navbar_sticky.js" defer> </script>
+    <script src="./scripts/video_detector.js" defer> </script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#description">Description</a></li>
+            <li><a href="#pieces">Pièces</a></li>
+            <li><a href="#caracteristiques">Caractéristiques</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <img id="robot-image" src="images/robot.png" alt="image robot">
+        <video id="myVideo" autoplay muted playsinline>
+            <source src="images/presentation.mp4" type="video/mp4">
+        </video>
+
+        <h1>Adeept Pi Car</h1>
+        <p>Un robot intelligent pour apprendre l'IA, la robotique et l'électronique</p>
+    </section>
+
+
+    <section id="description">
+        <div class="container">
+            <h2>Voiture intelligente</h2>
+            <h3>Adeept Kit Voiture Intelligente PiCar-B Mars Rover pour Raspberry Pi</h3>
+            <ul>
+                <li>Comprend un kit de voiture de robot AI basé sur Raspberry Pi</li>
+                <li>Conçu pour enseigner l'IA, la robotique et l'électronique</li>
+                <li>Offre le suivi des objets avec OpenCV</li>
+                <li>Il est conçu pour les débutants et les professionnels pour apprendre l'IA, la robotique et
+                    l'électronique</li>
+                <li>Ce kit de robot éducatif STEM est basé sur le Raspberry Pi (compatible avec RPi 3B / 3B + / 2B / 2B
+                    +, le Raspberry Pi n'est PAS inclus).</li>
+                <li>Le PiCar-B peut être contrôlé par la voix</li>
+                <li>Il offre la reconnaissance et le suivi des objets, basés sur OpenCV</li>
+                <li>Dispose d'une fonction d'évitement automatique des obstacles, basée sur le capteur à ultrasons</li>
+                <li>L'utilisation de la réflexion infrarouge permet d'effectuer le suivi de ligne.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="pieces">
+        <div class="container">
+            <h3>Pièces:</h3>
+            <div class="link">
+                <a href="./pdf/01-Packing List.pdf" target="blank">Manuel de montage</a>
+                <img src="./images/manuel.gif" id="manuel_image">
+            </div>
+            <ul>
+                <li>1 x ensemble de plaques acryliques</li>
+                <li>1 x Adeept Motor HAT V2.0</li>
+                <li>1 x caméra Raspberry Pi (avec câble)</li>
+                <li>1 x microphone USB</li>
+                <li>1 x module de capteur à ultrasons</li>
+                <li>2 x Module LED RGB Adeept</li>
+                <li>4 x module LED Adeept WS2812 RGB</li>
+                <li>1 x module de suivi de ligne Adeept 3CH</li>
+                <li>3 x servo</li>
+                <li>1 x motoréducteur</li>
+                <li>4 x roues</li>
+                <li>1 x support de batterie</li>
+                <li>1 x clé à douille cruciforme</li>
+                <li>2 x tournevis cruciforme (petit et grand)</li>
+                <li>1 x tuyau d'enroulement</li>
+                <li>10 x roulement (6 _F624ZZ + 4_ F687ZZ)</li>
+                <li>2 x Parapluie Gear Set</li>
+            </ul>
+        </div>
+
+    </section>
+    <section id="caracteristiques">
+        <div class="container">
+            <h3>Caractéristiques:</h3>
+            <ul>
+                <li>Reconnaissance de la parole</li>
+                <li>Reconnaissance et suivi d'objets</li>
+                <li>Suivi de ligne</li>
+                <li>Évitement automatique des obstacles</li>
+                <li>Transmission vidéo en temps réel</li>
+                <li>Contrôlé à distance par APP</li>
+            </ul>
+        </div>
+
+    </section>
+</body>
+
+</html>

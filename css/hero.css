@@ -1,0 +1,89 @@
+/* hero.css */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Turret+Road:wght@200;300;400;500;700;800&display=swap");
+
+section.hero {
+  /* Sizes */
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* Added */
+
+  text-align: center;
+}
+
+section.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+section.hero img#robot-image {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+
+  transition: opacity 2s ease-in-out;
+  opacity: 0;
+
+  object-fit: cover;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: blue;
+}
+
+
+section.hero::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.37);
+
+  z-index: 2;
+}
+
+section.hero h1,
+section.hero p {
+  position: relative;
+  z-index: 3;
+}
+
+section.hero h1 {
+  color: white;
+
+  font-size: 7rem;
+  font-family: "Turret Road", sans-serif;
+
+  text-shadow: 7px 7px 69px #c3c3c3, -7px -7px 69px #fdfdfd;
+}
+
+section.hero p {
+  color: rgb(151, 245, 142);
+
+  font-size: 1.2rem;
+  font-family: "Turret Road", sans-serif;
+
+  text-shadow: 7px 7px 69px #c3c3c3, -7px -7px 69px #fdfdfd;
+}
+
+/* Added gradient */
+section.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #cc6f2d 100%);
+  z-index: 4;
+}
