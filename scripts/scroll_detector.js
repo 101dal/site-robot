@@ -6,7 +6,7 @@ document.addEventListener('scroll', event => {
 
     const scroll = window.scrollY;
     if (scroll < navbar_height) {
-        window.scrollTo(navbar_height, 0)
+        window.scrollTo(navbar_height + 1, navbar_height + 1)
     }
 
     console.log(parseInt(scroll), window_height);
