@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+ul,
+div {
+    cursor: default;
+}
+
+body {
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    /* hide scrollbar */
+}

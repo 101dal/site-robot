@@ -12,6 +12,8 @@ section.hero {
   position: relative;
   /* Added */
 
+  background-color: black;
+
   text-align: center;
 }
 

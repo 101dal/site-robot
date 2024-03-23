@@ -7,16 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adeept Pi Car</title>
     <!-- Import the css -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        h1, h2, h3, p, li, ul, div {
-            cursor:default;
-        }
-    </style>
+    <link href="./css/main.css" rel="stylesheet">
     <link href="./css/navbar.css" rel="stylesheet">
     <link href="./css/hero.css" rel="stylesheet">
     <link href="./css/information.css" rel="stylesheet">
@@ -24,18 +15,22 @@
     <script src="./scripts/hover_effect.js" defer> </script>
     <script src="./scripts/navbar_sticky.js" defer> </script>
     <script src="./scripts/video_detector.js" defer> </script>
+    <script src="./scripts/smooth_scroll.js" defer></script>
+    <script src="./scripts/scroll_detector.js" defer></script>
 </head>
 
 <body>
     <nav>
         <ul>
-            <li><a href="#description">Description</a></li>
-            <li><a href="#pieces">Pièces</a></li>
-            <li><a href="#caracteristiques">Caractéristiques</a></li>
+            <li><a id="hero-link" href="#hero">Hero</a></li>
+            <li><a id="description-link" href="#description">Description</a></li>
+            <li><a id="pieces-link" href="#pieces">Pièces</a></li>
+            <li><a id="caracteristiques-link" href="#caracteristiques">Caractéristiques</a></li>
         </ul>
     </nav>
 
-    <section class="hero">
+
+    <section class="hero" id="hero">
         <div class="overlay"></div>
         <img id="robot-image" src="images/robot.png" alt="image robot">
         <video id="myVideo" autoplay muted playsinline>

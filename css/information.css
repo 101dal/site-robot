@@ -4,6 +4,12 @@ html {
   scroll-snap-type: y mandatory;
 }
 
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
 body {
   background: rgb(204, 111, 45);
   background: linear-gradient(180deg,
@@ -14,10 +20,7 @@ body {
       rgb(102, 55, 21) 100%);
 }
 
-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
+
 
 section:not(.hero) {
   min-height: 100vh;
