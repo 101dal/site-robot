@@ -18,6 +18,11 @@ window.onload = function () {
 };
 
 function desactivateLoading() {
+    const navbar = document.querySelector("nav");
+    const navbar_height = navbar.offsetHeight;
+
+    window.scrollTo(navbar_height, navbar_height);
+    
     document.getElementById('loading').remove();
 
 }
