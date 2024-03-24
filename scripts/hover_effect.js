@@ -9,12 +9,14 @@ const width = manuel_image.offsetWidth;
 const scrollWidth = document.documentElement.scrollWidth;
 
 document.addEventListener('mousemove', (event) => {
-    const mouse_position = event.clientX
+    const mouse_position = event.clientX;
 
     // Make the image move to the mouse relative to it.
     const translationPixels = mouse_position - x - (width / 2);
 
     manuel_image.style.transform = `translateX(${translationPixels}px)`;
+
+    console.log(translationPixels);
 
     // If the image goes over the screen then hide it
     if (mouse_position + width >= scrollWidth) {

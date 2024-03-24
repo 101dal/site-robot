@@ -4,6 +4,8 @@ const hero = document.querySelector("section.hero");
 const navbarHeight = navbar.offsetHeight;
 const heroHeight = hero.offsetHeight;
 
+document.querySelector(":root").style["--navbar-height"] = navbarHeight;
+
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
 
