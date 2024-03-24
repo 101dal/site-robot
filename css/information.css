@@ -23,6 +23,7 @@ body {
 
 
 section:not(.hero) {
+  margin-top: var(--navbar-height);
   min-height: 100vh;
   display: flex;
   align-items: center;

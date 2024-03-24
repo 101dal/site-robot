@@ -29,9 +29,8 @@ function finishLoading() {
 
 function desactivateLoading() {
     const navbar = document.querySelector("nav");
-    const navbar_height = navbar.offsetHeight;
 
-    window.scrollTo(navbar_height, navbar_height);
+    window.scrollTo(navbar_height, navbarHeight);
 
     document.getElementById('loading').remove();
 
