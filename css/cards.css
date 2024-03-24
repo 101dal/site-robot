@@ -37,6 +37,8 @@
 #cards .card {
     position: relative;
     overflow: hidden;
+
+    transition: transform 0.3s ease-in-out;
 }
 
 #cards .card:before {
@@ -57,8 +59,11 @@
 #cards .card::after {
     background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
     transform: translateX(-100%);
-  }
+}
 
+#cards .card:hover {
+    transform: scale(0.95);
+}
 
 #cards .card:hover:before {
     transform: translate(-50%, -50%);
