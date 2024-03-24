@@ -7,20 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adeept Pi Car</title>
     <!-- Import the css -->
+    <link href="./css/loader.css" rel="stylesheet">
+
     <link href="./css/main.css" rel="stylesheet">
     <link href="./css/navbar.css" rel="stylesheet">
     <link href="./css/hero.css" rel="stylesheet">
     <link href="./css/information.css" rel="stylesheet">
 
+    <!-- Import the scripts -->
     <script src="./scripts/hover_effect.js" defer> </script>
     <script src="./scripts/navbar_sticky.js" defer> </script>
     <script src="./scripts/video_detector.js" defer> </script>
     <script src="./scripts/smooth_scroll.js" defer></script>
     <script src="./scripts/scroll_detector.js" defer></script>
 
+
+
 </head>
 
 <body>
+    <!-- Add the loading screen div -->
+    <div id="loading">
+        <script src="./scripts/loader.js"></script>
+        <script src="./scripts/animation_loader.js"></script>
+        <div id="loading-content">
+            <h2>Loading...</h2>
+        </div>
+    </div>
+
+
     <nav>
         <ul>
             <li><a id="hero-link" href="#hero">Hero</a></li>
@@ -34,7 +49,7 @@
     <section class="hero" id="hero">
         <div class="overlay"></div>
         <img id="robot-image" src="images/robot.png" alt="image robot">
-        <video id="myVideo" autoplay muted playsinline>
+        <video id="myVideo" muted playsinline>
             <source src="images/presentation.mp4" type="video/mp4">
         </video>
 
