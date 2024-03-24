@@ -14,6 +14,8 @@
     <link href="./css/hero.css" rel="stylesheet">
     <link href="./css/information.css" rel="stylesheet">
 
+    <link href="./css/cards.css" rel="stylesheet">
+
     <!-- Import the scripts -->
     <script src="./scripts/hover_effect.js" defer> </script>
     <script src="./scripts/navbar_sticky.js" defer> </script>
@@ -21,6 +23,8 @@
 
     <script src="./scripts/smooth_scroll.js" defer></script>
     <script src="./scripts/scroll_detector.js" defer></script>
+
+    <script src="./scripts/cards.js" defer></script>
     <!--
         <script src="./scripts/scroll_snap.js" defer></script>
     -->
@@ -53,7 +57,7 @@
     <section class="hero" id="hero">
         <div class="overlay"></div>
         <img id="robot-image" src="images/robot.png" alt="image robot">
-        <video id="myVideo" muted playsinline>
+        <video id="myVideo" playsinline>
             <source src="images/presentation.mp4" type="video/mp4">
         </video>
 
@@ -114,14 +118,33 @@
     <section id="caracteristiques">
         <div class="container">
             <h3>Caractéristiques:</h3>
-            <ul>
-                <li>Reconnaissance de la parole</li>
-                <li>Reconnaissance et suivi d'objets</li>
-                <li>Suivi de ligne</li>
-                <li>Évitement automatique des obstacles</li>
-                <li>Transmission vidéo en temps réel</li>
-                <li>Contrôlé à distance par APP</li>
-            </ul>
+
+            <div id="cards">
+                <div class="card">
+                    <img src="./images/cards/microphone.png">
+                    <h3>Reconnaissance de la parole</h3>
+                </div>
+                <div class="card">
+                    <img src="./images/cards/eye.png">
+                    <h3>Reconnaissance et suivi d'objets</h3>
+                </div>
+                <div class="card">
+                    <img src="./images/cards/motion-sensor.png">
+                    <h3>Suivi de ligne</h3>
+                </div>
+                <div class="card">
+                    <img src="./images/cards/granite.png">
+                    <h3>Évitement automatique des obstacles</h3>
+                </div>
+                <div class="card">
+                    <img src="./images/cards/camera.png">
+                    <h3>Transmission vidéo en temps réel</h3>
+                </div>
+                <div class="card">
+                    <img src="./images/cards/smartphone.png">
+                    <h3>Contrôlé à distance par APP</h3>
+                </div>
+            </div>
         </div>
 
     </section>

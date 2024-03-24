@@ -8,11 +8,11 @@ window.onload = function () {
 
     setTimeout(function () {
         if (pageLoadTime < minimumDelay) {
-            desactivateLoading()
             startVideo();
+            desactivateLoading()
         } else {
-            desactivateLoading()
             startVideo();
+            desactivateLoading()
         }
     }, minimumDelay);
 };
@@ -21,7 +21,7 @@ function desactivateLoading() {
     const navbar = document.querySelector("nav");
     const navbar_height = navbar.offsetHeight;
 
-    window.scrollTo(navbar_height, navbar_height);
+    // window.scrollTo(navbar_height, navbar_height);
     
     document.getElementById('loading').remove();
 
