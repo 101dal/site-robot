@@ -30,7 +30,7 @@ function finishLoading() {
 function desactivateLoading() {
     const navbar = document.querySelector("nav");
 
-    window.scrollTo(navbarHeight, navbarHeight);
+    window.scrollTo(0, 0);
 
     document.getElementById('loading').remove();
 

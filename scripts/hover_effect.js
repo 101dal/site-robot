@@ -16,8 +16,6 @@ document.addEventListener('mousemove', (event) => {
 
     manuel_image.style.transform = `translateX(${translationPixels}px)`;
 
-    console.log(translationPixels);
-
     // If the image goes over the screen then hide it
     if (mouse_position + width >= scrollWidth) {
         manuel_image.style.display = "none";
