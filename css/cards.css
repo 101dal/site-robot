@@ -69,3 +69,19 @@
     transform: translate(-50%, -50%);
     opacity: 1;
 }
+
+#cards {
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+    #cards .card {
+        width: calc(50% - 12px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #cards .card {
+        width: 100%;
+    }
+}

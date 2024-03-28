@@ -51,8 +51,8 @@ nav a {
     transition: color 0.3s ease-in-out;
 }
 
-
-
-nav a:hover {
-    color: #cc6f2d;
+@media screen and (max-width: 768px) {
+    nav a {
+        font-size: clamp(0.5rem, 3vw, 1rem);
+    }
 }
