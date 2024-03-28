@@ -88,12 +88,42 @@ section.hero::after {
   z-index: 4;
 }
 
+section.hero a {
+  opacity: 0.6;
+  display: inline-block;
+  background: #cc6f2d;
+  box-shadow: 5px 5px 8px #ad5e26,
+    -5px -5px 8px #eb8034;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: "Turret Road", sans-serif;
+  margin-top: 20px;
+  position: relative;
+  z-index: 3;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section.hero a:hover {
+  background: #b44113;
+  box-shadow: 5px 5px 8px #993710,
+    -5px -5px 8px #cf4b16;
+}
+
+
 @media screen and (max-width: 768px) {
   section.hero h1 {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 
   section.hero p {
-      font-size: 1rem;
+    font-size: 1rem;
+  }
+
+  section.hero a {
+    font-size: 1rem;
+    padding: 10px 15px;
   }
 }

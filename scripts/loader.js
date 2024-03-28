@@ -32,8 +32,6 @@ function finishLoading() {
 }
 
 function desactivateLoading() {
-    const navbar = document.querySelector("nav");
-
     window.scrollTo(0, 0);
 
     document.getElementById('loading').remove();
