@@ -5,6 +5,8 @@ nav {
 
     width: calc(100%);
 
+    height: 56px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,6 +51,7 @@ nav a {
     font-weight: bold;
     font-size: clamp(0.5rem, 5vw, 2rem);
     transition: color 0.3s ease-in-out;
+
 }
 
 @media screen and (max-width: 768px) {
