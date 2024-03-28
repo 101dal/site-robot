@@ -157,6 +157,11 @@
         if (window.innerWidth < 768) {
             alert("Ce site ne va pas fonctionner correctement sur un appareil avec cette taille d'écran");
         }
+
+        window.onresize = function () {
+            location.reload();
+        };
+
     </script>
 </body>
 

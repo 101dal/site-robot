@@ -10,6 +10,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 
@@ -23,8 +24,8 @@ nav::after {
     width: 100%;
     height: calc(100% + 10px);
 
-    background: #b44113;
-    background: linear-gradient(180deg, rgba(180,65,19,1) 0%, rgba(180,65,19,1) 90%, rgba(134,175,179,0) 100%);
+    background: white;
+    background: linear-gradient(180deg, rgb(130, 2, 2) 0%, rgba(134, 175, 179, 0) 100%);
 
     transition: opacity 0.5s linear;
     opacity: 0;
@@ -53,6 +54,11 @@ nav a {
     transition: color 0.3s ease-in-out;
 
 }
+
+nav a:hover {
+    color: #b44113; /* Change the color to whatever you prefer */
+}
+
 
 @media screen and (max-width: 768px) {
     nav a {
