@@ -3,8 +3,9 @@ let lines = [];
 
 
 const sections = Array.from(document.querySelectorAll('section')).map(section => {
-    const top = section.offsetTop;
-    const bottom = section.offsetHeight + top;
+    const rect = section.getBoundingClientRect();
+    const top = rect.top;
+    const bottom = rect.bottom;
 
     // Create and append blue lines
     const topLine = document.createElement('div');
@@ -49,21 +50,30 @@ let previousScrollPosition = window.scrollY;
 window.addEventListener('scroll', event => {
     const currentScrollPosition = window.scrollY;
     const isScrollingUp = (previousScrollPosition > currentScrollPosition);
+    previousScrollPosition = currentScrollPosition;
     const screenHeigh = window.innerHeight;
-    const scrollY = window.scrollY + screenHeigh;
+    const scrollBottom = currentScrollPosition + screenHeigh;
+    const scrollTop = currentScrollPosition;
 
     let scroll = false;
 
-    lines.forEach(l => {
-
-    })
-
     sections.forEach(section => {
-        const top = section.top;
-        const bottom = section.bottom;
+        const top = section.top; // The coords of the top of the section
+        const bottom = section.bottom; // The coords of the bottom of the section
 
-        if ((top < scrollY) && (bottom > scrollY) && (section.section !== currentSection)) {
-            console.log("new section. Previous section : " + currentSection.id);
+        // Calculate if intersecting with the section (default to false)
+        let isIntersectingTop = false;
+
+        if (isScrollingUp) {
+            isIntersectingTop = (top <= scrollTop) && (scrollTop < bottom);
+        } else {
+            isIntersectingTop = (top <= scrollBottom) && (scrollBottom < bottom);
+        }
+        // Is the current section the same as before
+        const isCurrentSection = section.section == currentSection;
+
+        if (isIntersectingTop && !isCurrentSection) {
+            console.log(`New section : ${section.section.id}. Previous section: ${currentSection.id}. Scrolling ${isScrollingUp ? "UP" : "DOWN"}`)
             currentSection = section.section;
             scroll = true;
         }
@@ -72,6 +82,9 @@ window.addEventListener('scroll', event => {
 
     if (scroll) {
         console.log(scroll);
-        scroll = false;
+        scrollTimer = setTimeout(() => {
+            currentSection.scrollIntoView({ behavior: "smooth" });
+            scroll = false;
+        }, 100); // adjust the delay as needed
     }
 });

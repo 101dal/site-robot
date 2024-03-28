@@ -2,7 +2,11 @@
 const minimumDelay = 1000;
 let pageLoadTime;
 
+window.scrollTo(0, 0);
+
+
 window.onload = function () {
+    window.scrollTo(0, 0);
     pageLoadTime = new Date().getTime() - PerformanceNavigationTiming.startTime;
 
     setTimeout(function () {
