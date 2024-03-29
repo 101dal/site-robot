@@ -24,8 +24,8 @@ nav::after {
     width: 100%;
     height: calc(100% + 10px);
 
-    background: white;
-    background: linear-gradient(180deg, rgb(130, 2, 2) 0%, rgba(134, 175, 179, 0) 100%);
+    background: rgb(220,232,11);
+background: linear-gradient(180deg, rgba(220,232,11,1) 0%, rgba(220,232,11,1) 75%, rgba(0,0,0,0) 100%);
 
     transition: opacity 0.5s linear;
     opacity: 0;
